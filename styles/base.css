@@ -64,6 +64,11 @@ nav a:hover{
 background:#555;
 }
 
+nav a.active{
+background:#555;
+font-weight:bold;
+}
+
 nav.open{
 display:flex;
 }
@@ -133,6 +138,10 @@ background:#eee;
 cursor:pointer;
 }
 
+.buttons button:hover{
+background:#ccc;
+}
+
 #course-container{
 display:grid;
 gap:10px;
@@ -169,6 +178,10 @@ margin:20px 0;
 .socials a{
 text-decoration:none;
 color:#222;
+}
+
+.socials a:hover{
+text-decoration:underline;
 }
 
 /* FOOTER */
