@@ -4,7 +4,8 @@ document.querySelector("#year").textContent = new Date().getFullYear();
 
 /* LAST MODIFIED */
 
-document.querySelector("#lastModified").textContent = `Last Modified: ${document.lastModified}`;
+document.querySelector("#lastModified").textContent =
+`Last Modified: ${document.lastModified}`;
 
 /* MOBILE MENU */
 
