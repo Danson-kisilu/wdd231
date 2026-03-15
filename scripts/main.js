@@ -88,6 +88,6 @@ document.querySelector("#credits").textContent=`Total Credits: ${total}`;
 
 }
 
-/* INITIAL LOAD */
+
 
 displayCourses(courses);
