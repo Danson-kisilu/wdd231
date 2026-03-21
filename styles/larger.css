@@ -1,0 +1,26 @@
+@media (min-width:768px){
+
+#menuButton{
+display:none;
+}
+
+nav{
+display:flex;
+flex-direction:row;
+background:#222;
+}
+
+nav a{
+border:none;
+padding:10px 20px;
+}
+
+.cards{
+grid-template-columns:2fr 1fr;
+}
+
+#course-container{
+grid-template-columns:repeat(3,1fr);
+}
+
+}
