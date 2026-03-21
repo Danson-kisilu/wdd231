@@ -7,7 +7,7 @@ async function getMembers() {
   const data = await response.json();
   displayMembers(data);
 }
-
+fetch("data/members.json")
 getMembers();
 
 // DISPLAY MEMBERS
