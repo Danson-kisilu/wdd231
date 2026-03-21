@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Nairobi Chamber - Directory</title>
+
+  <meta name="description" content="Business directory for Nairobi Chamber of Commerce">
+  <meta name="author" content="Danson Kisilu">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+
+  <!-- JS -->
+  <script defer src="scripts/navigation.js"></script>
+  <script defer src="scripts/date.js"></script>
+  <script defer src="scripts/directory.js"></script>
+</head>
+
+<body>
+
+<header>
+  <h1>Nairobi Chamber of Commerce</h1>
+  <button id="menuBtn">☰</button>
+</header>
+
+<nav id="navMenu">
+  <a href="index.html">Home</a>
+  <a href="directory.html" class="active">Directory</a>
+</nav>
+
+<main>
+
+  <h2>Business Directory</h2>
+
+  <!-- VIEW TOGGLE -->
+  <div class="view-buttons">
+    <button id="gridBtn">Grid</button>
+    <button id="listBtn">List</button>
+  </div>
+
+  <!-- DIRECTORY OUTPUT -->
+  <section id="directory" class="grid"></section>
+
+</main>
+
+<footer>
+  <p>© <span id="year"></span> Danson Kisilu • Kenya</p>
+  <p id="lastModified"></p>
+</footer>
+
+</body>
+</html>

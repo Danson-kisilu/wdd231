@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nairobi Chamber | Home</title>
+
+<meta name="description" content="Nairobi Chamber of Commerce supporting local businesses.">
+<meta name="author" content="Danson Kisilu">
+
+<link rel="stylesheet" href="styles/small.css">
+<link rel="stylesheet" href="styles/larger.css">
+
+<script defer src="scripts/navigation.js"></script>
+<script defer src="scripts/date.js"></script>
+<script defer src="scripts/members.js"></script>
+</head>
+
+<body>
+
+<header>
+    <h1>Nairobi Chamber of Commerce</h1>
+    <button id="menuButton">☰</button>
+</header>
+
+<nav id="navMenu">
+    <a href="#" class="active">Home</a>
+    <a href="#">Discover</a>
+    <a href="#">Directory</a>
+    <a href="#">Join</a>
+</nav>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+    <img src="images/hero.jpg" alt="Nairobi City">
+    <div class="hero-text">
+        <h2>Support Local Business</h2>
+        <a href="#" class="cta">Join the Chamber</a>
+    </div>
+</section>
+
+<!-- GRID SECTION -->
+<div class="home-grid">
+
+    <!-- EVENTS -->
+    <section class="card">
+        <h2>Events</h2>
+        <p>📍 Nairobi Business Meetup</p>
+        <p>📅 Saturday 10AM</p>
+    </section>
+
+    <!-- WEATHER -->
+    <section class="card">
+        <h2>Current Weather</h2>
+        <p>🌤 25°C</p>
+        <p>Humidity: 60%</p>
+    </section>
+
+    <!-- FORECAST -->
+    <section class="card">
+        <h2>Weather Forecast</h2>
+        <p>Mon: 26°C</p>
+        <p>Tue: 24°C</p>
+        <p>Wed: 25°C</p>
+    </section>
+
+</div>
+
+<!-- SPOTLIGHT -->
+<section class="spotlight">
+    <h2>Business Spotlights</h2>
+    <div id="members"></div>
+</section>
+
+</main>
+
+<footer>
+<p>© <span id="year"></span> • Danson Kisilu • Kenya</p>
+<p id="lastModified"></p>
+</footer>
+
+</body>
+</html>

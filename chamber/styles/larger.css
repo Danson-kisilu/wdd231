@@ -1,0 +1,35 @@
+@media (min-width:768px){
+
+nav{
+display:flex;
+flex-direction:row;
+justify-content:center;
+}
+
+nav a{
+border:none;
+padding:15px 20px;
+}
+
+/* GRID LAYOUT */
+.home-grid{
+grid-template-columns:repeat(3, 1fr);
+}
+
+/* SPOTLIGHT GRID */
+#members{
+grid-template-columns:repeat(3,1fr);
+}
+
+header h1{
+font-size:1.5rem;
+}
+
+}
+@media (min-width: 768px) {
+
+  #directory.grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
