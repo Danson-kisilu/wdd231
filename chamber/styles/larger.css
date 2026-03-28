@@ -30,13 +30,11 @@
         gap: 20px;
     }
 
-    /* Directory Grid - 2 columns on tablet */
     #directory.directory-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
 
-    /* Directory List View */
     #directory.directory-list .member-img {
         width: 100px;
         height: 100px;
@@ -88,7 +86,6 @@
     }
 }
 
-/* Large Desktop - 1024px and up */
 @media (min-width: 1024px) {
 
     #directory.directory-grid {
@@ -115,7 +112,6 @@
     }
 }
 
-/* Extra Large Desktop */
 @media (min-width: 1200px) {
     #directory.directory-grid {
         gap: 30px;
