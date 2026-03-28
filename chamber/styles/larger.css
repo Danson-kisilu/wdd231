@@ -1,9 +1,6 @@
 /* Large Screen Styles - 768px and up */
-
-
 @media (min-width: 768px) {
 
-    /* Navigation - Horizontal on desktop */
     nav {
         display: flex;
         flex-direction: row;
@@ -15,45 +12,36 @@
         padding: 15px 20px;
     }
 
-    /* Hide hamburger menu on desktop */
     #menuButton {
         display: none;
     }
 
-    /* Header */
     header h1 {
         font-size: 1.5rem;
     }
 
-    /* Home Page Grid */
     .home-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 25px;
     }
 
-    /* Spotlight Grid */
     #members {
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
     }
 
-    /* DIRECTORY PAGE - Grid View (2 columns on tablet) */
+    /* Directory Grid - 2 columns on tablet */
     #directory.directory-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
 
-    /* Directory List View - Larger images */
+    /* Directory List View */
     #directory.directory-list .member-img {
         width: 100px;
         height: 100px;
     }
 
-    #directory.directory-list .member-info h3 {
-        font-size: 1.2rem;
-    }
-
-    /* Hero Section */
     .hero img {
         height: 400px;
     }
@@ -62,11 +50,6 @@
         font-size: 2rem;
     }
 
-    .hero-text p {
-        font-size: 1.2rem;
-    }
-
-    /* Weather Section */
     .weather-current {
         padding: 25px;
     }
@@ -75,10 +58,8 @@
         font-size: 2.5rem;
     }
 
-    /* Forecast Cards - Horizontal layout */
     #forecast-container {
         flex-direction: row;
-        justify-content: space-between;
         gap: 15px;
     }
 
@@ -86,11 +67,9 @@
         flex: 1;
     }
 
-    /* Footer */
     footer {
         display: flex;
         justify-content: space-between;
-        align-items: center;
         text-align: left;
         flex-wrap: wrap;
     }
@@ -112,19 +91,16 @@
 /* Large Desktop - 1024px and up */
 @media (min-width: 1024px) {
 
-    /* Directory Grid - 3 columns on desktop */
     #directory.directory-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 25px;
     }
 
-    /* Directory List View - Even larger images */
     #directory.directory-list .member-img {
         width: 120px;
         height: 120px;
     }
 
-    /* Hero Section */
     .hero img {
         height: 500px;
     }
@@ -133,48 +109,15 @@
         font-size: 2.5rem;
     }
 
-    .hero-text p {
-        font-size: 1.3rem;
-    }
-
-    /* View Buttons */
     .view-buttons button {
         padding: 0.8rem 2.5rem;
         font-size: 1.1rem;
     }
 }
 
-/* Extra Large Desktop - 1200px and up */
+/* Extra Large Desktop */
 @media (min-width: 1200px) {
-
-    /* Directory Grid - More spacing */
     #directory.directory-grid {
         gap: 30px;
-    }
-
-    .member-card:hover {
-        transform: translateY(-8px);
-    }
-}
-
-
-
-@media (min-width: 768px) {
-    #forecast-container {
-        flex-direction: row;
-        gap: 15px;
-    }
-    
-    .forecast-card {
-        flex: 1;
-    }
-    
-    .temp {
-        font-size: 2.5rem;
-    }
-    
-    #members {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
     }
 }
