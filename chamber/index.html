@@ -1,87 +1,125 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Nairobi Chamber | Home</title>
+    <title>Nairobi Chamber | Home</title>
 
-<meta name="description" content="Nairobi Chamber of Commerce supporting local businesses.">
-<meta name="author" content="Danson Kisilu">
+    <meta name="description" content="Nairobi Chamber of Commerce supporting local businesses and economic growth in Kenya.">
+    <meta name="author" content="Danson Kisilu">
 
-<link rel="stylesheet" href="styles/small.css">
-<link rel="stylesheet" href="styles/larger.css">
+    <!-- Facebook Open Graph Meta Tags -->
+    <meta property="og:title" content="Nairobi Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Supporting local businesses and economic growth in Nairobi.">
+    <meta property="og:image" content="images/hero.jpg">
+    <meta property="og:url" content="https://danson-kisilu.github.io/wdd231/chamber/index.html">
 
-<script defer src="scripts/navigation.js"></script>
-<script defer src="scripts/date.js"></script>
-<script defer src="scripts/members.js"></script>
+    <link rel="icon" href="../images/logo.svg">
+
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <script defer src="scripts/navigation.js"></script>
+    <script defer src="scripts/date.js"></script>
+    <script type="module" src="scripts/main.mjs"></script>
 </head>
 
 <body>
 
 <header>
     <h1>Nairobi Chamber of Commerce</h1>
-    <button id="menuButton">☰</button>
+    <button id="menuButton" aria-label="Menu">☰</button>
 </header>
 
 <nav id="navMenu">
-    <a href="index.html" class="active">Home</a>
-    <a href="directory.html">Discover</a>
-    <a href="directory.html">Directory</a>
-
+    <a href="../index.html">🏠 Main Home</a>
+    <a href="index.html">Chamber Home</a>
+    <a href="directory.html" class="active">Directory</a>
     <a href="join.html">Join</a>
 </nav>
 
 <main>
 
-<!-- HERO -->
-<section class="hero">
-    <img src="images/hero.jpg" alt="Nairobi City">
-    <div class="hero-text">
-        <h2>Support Local Business</h2>
-        <a href="#" class="cta">Join the Chamber</a>
+    <!-- HERO SECTION with CTA -->
+    <section class="hero">
+        <img src="images/hero.jpg" alt="Nairobi city skyline with modern buildings" loading="lazy">
+        <div class="hero-text">
+            <h2>Support Local Business</h2>
+            <p>Join Nairobi's growing business community</p>
+            <a href="join.html" class="cta">Join the Chamber →</a>
+        </div>
+    </section>
+
+    <!-- GRID SECTION -->
+    <div class="home-grid">
+
+        <!-- EVENTS SECTION -->
+        <section class="card">
+            <h2>Upcoming Events</h2>
+            <div class="event">
+                <h3>Business Networking Mixer</h3>
+                <p>📅 April 15, 2026 | 6:00 PM</p>
+                <p>📍 Nairobi Serena Hotel</p>
+                <p>Connect with local business leaders over refreshments.</p>
+            </div>
+            <div class="event">
+                <h3>Digital Marketing Workshop</h3>
+                <p>📅 April 22, 2026 | 9:00 AM</p>
+                <p>📍 Chamber Offices</p>
+                <p>Learn social media strategies for 2026.</p>
+            </div>
+            <div class="event">
+                <h3>Annual Trade Fair</h3>
+                <p>📅 May 5-7, 2026</p>
+                <p>📍 KICC Nairobi</p>
+                <p>Showcase your business to thousands of visitors.</p>
+            </div>
+        </section>
+
+        <!-- WEATHER SECTION with API -->
+        <section class="card weather-card">
+            <h2>Current Weather</h2>
+            <div class="weather-current">
+                <div class="weather-info">
+                    <p class="temp" id="current-temp">--°C</p>
+                    <p id="weather-desc">Loading...</p>
+                    <p>💧 Humidity: <span id="humidity">--</span>%</p>
+                </div>
+                <img id="weather-icon" src="" alt="Weather icon" width="80" height="80">
+            </div>
+            <div class="weather-forecast">
+                <h3>3-Day Forecast</h3>
+                <div id="forecast-container">
+                    <p>Loading forecast...</p>
+                </div>
+            </div>
+        </section>
+
     </div>
-</section>
 
-<!-- GRID SECTION -->
-<div class="home-grid">
-
-    <!-- EVENTS -->
-    <section class="card">
-        <h2>Events</h2>
-        <p>📍 Nairobi Business Meetup</p>
-        <p>📅 Saturday 10AM</p>
+    <!-- SPOTLIGHT SECTION -->
+    <section class="spotlight">
+        <h2>Member Spotlights</h2>
+        <div id="members"></div>
     </section>
-
-    <!-- WEATHER -->
-    <section class="card">
-        <h2>Current Weather</h2>
-        <p>🌤 25°C</p>
-        <p>Humidity: 60%</p>
-    </section>
-
-    <!-- FORECAST -->
-    <section class="card">
-        <h2>Weather Forecast</h2>
-        <p>Mon: 26°C</p>
-        <p>Tue: 24°C</p>
-        <p>Wed: 25°C</p>
-    </section>
-
-</div>
-
-<!-- SPOTLIGHT -->
-<section class="spotlight">
-    <h2>Business Spotlights</h2>
-    <div id="members"></div>
-</section>
 
 </main>
 
 <footer>
-<p>© <span id="year"></span> • Danson Kisilu • Kenya</p>
-<p id="lastModified"></p>
+    <div class="footer-contact">
+        <p><strong>Nairobi Chamber of Commerce</strong></p>
+        <p>📍 Kenyatta Avenue, Nairobi, Kenya</p>
+        <p>📞 +254 700 123456</p>
+        <p>✉️ info@nairobinchamber.co.ke</p>
+    </div>
+    <div class="footer-info">
+        <p>© <span id="year"></span> • Danson Kisilu • WDD 231</p>
+        <p id="lastModified"></p>
+    </div>
 </footer>
 
 </body>
+
 </html>

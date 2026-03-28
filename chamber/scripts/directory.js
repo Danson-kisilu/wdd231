@@ -1,46 +1,94 @@
+// directory.js - Handles member directory with grid/list view toggle
+
 const url = "data/members.json";
 const container = document.querySelector("#directory");
 
 // FETCH DATA
 async function getMembers() {
-  const response = await fetch(url);
-  const data = await response.json();
-  displayMembers(data);
+    try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('Failed to load member data');
+        const data = await response.json();
+        displayMembers(data);
+    } catch (error) {
+        console.error('Error fetching members:', error);
+        container.innerHTML = '<p class="error">Unable to load directory. Please try again later.</p>';
+    }
 }
-fetch("data/members.json")
-getMembers();
 
 // DISPLAY MEMBERS
 function displayMembers(members) {
+    container.innerHTML = "";
 
-  container.innerHTML = "";
+    members.forEach(member => {
+        const card = document.createElement("div");
+        card.classList.add("member-card");
 
-  members.forEach(member => {
+        // Use the exact image filename from JSON
+        const imageName = member.image || member.name.replace(/ /g, '-') + '.jpg';
+        
+        // Format membership level for display
+        let membershipBadge = '';
+        const level = member.level || member.membership;
+        switch(level) {
+            case 'Gold':
+                membershipBadge = '<span class="badge gold">⭐ Gold Member</span>';
+                break;
+            case 'Silver':
+                membershipBadge = '<span class="badge silver">✨ Silver Member</span>';
+                break;
+            default:
+                membershipBadge = '<span class="badge member">🤝 Member</span>';
+        }
 
-    const card = document.createElement("div");
-    card.classList.add("card");
+        card.innerHTML = `
+            <img src="images/${imageName}" alt="${member.name}" class="member-img" onerror="this.src='../images/logo.svg'">
+            <div class="member-info">
+                <h3>${member.name}</h3>
+                <p class="member-desc">${member.description || ''}</p>
+                <p class="member-address">📍 ${member.address || 'Address not available'}</p>
+                <p class="member-phone">📞 ${member.phone || 'N/A'}</p>
+                <a href="${member.website}" target="_blank" rel="noopener" class="member-website">🌐 Visit Website</a>
+                ${membershipBadge}
+            </div>
+        `;
 
-    card.innerHTML = `
-      <img src="images/${member.image}" alt="${member.name}">
-      <h3>${member.name}</h3>
-      <p>${member.address}</p>
-      <p>${member.phone}</p>
-      <a href="${member.website}" target="_blank">Visit Website</a>
-      <p><strong>${member.membership}</strong></p>
-    `;
-
-    container.appendChild(card);
-  });
+        container.appendChild(card);
+    });
+    
+    // Set initial view to GRID after displaying members
+    setGridView();
 }
 
-// VIEW TOGGLE
+// VIEW TOGGLE FUNCTIONALITY
+const gridBtn = document.querySelector("#gridBtn");
+const listBtn = document.querySelector("#listBtn");
 
-document.querySelector("#gridBtn").addEventListener("click", () => {
-  container.classList.add("grid");
-  container.classList.remove("list");
-});
+function setGridView() {
+    if (!container) return;
+    container.classList.remove("directory-list");
+    container.classList.add("directory-grid");
+    
+    if (gridBtn) gridBtn.classList.add("active");
+    if (listBtn) listBtn.classList.remove("active");
+}
 
-document.querySelector("#listBtn").addEventListener("click", () => {
-  container.classList.add("list");
-  container.classList.remove("grid");
-});
+function setListView() {
+    if (!container) return;
+    container.classList.remove("directory-grid");
+    container.classList.add("directory-list");
+    
+    if (listBtn) listBtn.classList.add("active");
+    if (gridBtn) gridBtn.classList.remove("active");
+}
+
+// Add event listeners
+if (gridBtn) {
+    gridBtn.addEventListener("click", setGridView);
+}
+if (listBtn) {
+    listBtn.addEventListener("click", setListView);
+}
+
+// INITIAL LOAD
+getMembers();

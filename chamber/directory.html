@@ -1,55 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Nairobi Chamber - Directory</title>
+    <title>Nairobi Chamber | Directory</title>
 
-  <meta name="description" content="Business directory for Nairobi Chamber of Commerce">
-  <meta name="author" content="Danson Kisilu">
+    <meta name="description" content="Business directory for Nairobi Chamber of Commerce - member companies and services.">
+    <meta name="author" content="Danson Kisilu">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles/small.css">
-  <link rel="stylesheet" href="styles/large.css">
+    <!-- Facebook Open Graph Meta Tags -->
+    <meta property="og:title" content="Nairobi Chamber of Commerce Directory">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Connect with Nairobi's leading businesses and chamber members.">
+    <meta property="og:image" content="images/hero.jpg">
+    <meta property="og:url" content="https://danson-kisilu.github.io/wdd231/chamber/directory.html">
 
-  <!-- JS -->
-  <script defer src="scripts/navigation.js"></script>
-  <script defer src="scripts/date.js"></script>
-  <script defer src="scripts/directory.js"></script>
+    <link rel="icon" href="../images/logo.svg">
+
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <script defer src="scripts/navigation.js"></script>
+    <script defer src="scripts/date.js"></script>
+    <script defer src="scripts/directory.js"></script>
 </head>
 
 <body>
 
 <header>
-  <h1>Nairobi Chamber of Commerce</h1>
-  <button id="menuBtn">☰</button>
+    <h1>Nairobi Chamber of Commerce</h1>
+    <button id="menuButton" aria-label="Menu">☰</button>
 </header>
 
 <nav id="navMenu">
-  <a href="index.html">Home</a>
-  <a href="directory.html" class="active">Directory</a>
+    <a href="../index.html">🏠 Main Home</a>
+    <a href="index.html">Chamber Home</a>
+    <a href="directory.html" class="active">Directory</a>
+    <a href="join.html">Join</a>
 </nav>
 
 <main>
 
-  <h2>Business Directory</h2>
+    <!-- HERO SECTION -->
+    <section class="hero directory-hero">
+        <img src="images/hero.jpg" alt="Nairobi city skyline with modern buildings" loading="lazy">
+        <div class="hero-text">
+            <h2>Business Directory</h2>
+            <p>Connect with Nairobi's leading businesses</p>
+        </div>
+    </section>
 
-  <!-- VIEW TOGGLE -->
-  <div class="view-buttons">
-    <button id="gridBtn">Grid</button>
-    <button id="listBtn">List</button>
-  </div>
+    <!-- DIRECTORY CONTENT -->
+    <div class="directory-container">
+        <h2>Member Directory</h2>
 
-  <!-- DIRECTORY OUTPUT -->
-  <section id="directory" class="grid"></section>
+        <!-- VIEW TOGGLE BUTTONS -->
+        <div class="view-buttons">
+            <button id="gridBtn" class="active" aria-label="Grid View">
+                📱 Grid View
+            </button>
+            <button id="listBtn" aria-label="List View">
+                📋 List View
+            </button>
+        </div>
+
+        <!-- DIRECTORY OUTPUT -->
+        <div id="directory" class="directory-grid"></div>
+    </div>
 
 </main>
 
 <footer>
-  <p>© <span id="year"></span> Danson Kisilu • Kenya</p>
-  <p id="lastModified"></p>
+    <div class="footer-contact">
+        <p><strong>Nairobi Chamber of Commerce</strong></p>
+        <p>📍 Kenyatta Avenue, Nairobi, Kenya</p>
+        <p>📞 +254 700 123456</p>
+        <p>✉️ info@nairobinchamber.co.ke</p>
+    </div>
+    <div class="footer-info">
+        <p>© <span id="year"></span> • Danson Kisilu • WDD 231</p>
+        <p id="lastModified"></p>
+    </div>
 </footer>
 
 </body>
+
 </html>

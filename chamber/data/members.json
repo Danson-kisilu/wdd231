@@ -2,16 +2,31 @@
   {
     "name": "Fresh Farm Exporters",
     "level": "Gold",
-    "description": "Export quality vegetables worldwide"
+    "membership": "Gold",
+    "description": "Export quality vegetables worldwide",
+    "address": "123 Export Road, Nairobi, Kenya",
+    "phone": "+254 700 123456",
+    "website": "https://freshfarmexporters.co.ke",
+    "image": "Fresh Farm Exporters.jpg"
   },
   {
     "name": "AgroTech Kenya",
     "level": "Silver",
-    "description": "Modern smart farming tools"
+    "membership": "Silver",
+    "description": "Modern smart farming tools",
+    "address": "456 Tech Park, Nairobi, Kenya",
+    "phone": "+254 711 234567",
+    "website": "https://agrotechkenya.co.ke",
+    "image": "AgroTech Kenya.jpg"
   },
   {
     "name": "Green Harvest",
     "level": "Gold",
-    "description": "Organic produce supplier"
+    "membership": "Gold",
+    "description": "Organic produce supplier",
+    "address": "789 Green Valley, Nairobi, Kenya",
+    "phone": "+254 722 345678",
+    "website": "https://greenharvest.co.ke",
+    "image": "Organic produce supplier.jpg"
   }
 ]

@@ -142,12 +142,7 @@ padding:15px;
 font-size:0.9rem;
 }
 
-
-
-
-
 /* DIRECTORY */
-
 .view-buttons {
   display: flex;
   justify-content: center;
@@ -166,8 +161,6 @@ font-size:0.9rem;
 .view-buttons button:hover {
   background: #555;
 }
-
-/* GRID VIEW */
 
 #directory.grid {
   display: grid;
@@ -188,8 +181,6 @@ font-size:0.9rem;
   margin-bottom: 10px;
 }
 
-/* LIST VIEW */
-
 #directory.list {
   display: block;
 }
@@ -199,4 +190,339 @@ font-size:0.9rem;
   align-items: center;
   justify-content: space-between;
   text-align: left;
+}
+
+
+
+/* Directory Hero Variation */
+.directory-hero .hero-text h2 {
+    font-size: 1.8rem;
+}
+
+.directory-hero .hero-text p {
+    font-size: 1rem;
+}
+
+/* Directory Container */
+.directory-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.directory-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Enhanced View Buttons */
+.view-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.view-buttons button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #e0e0e0;
+    color: #333;
+}
+
+.view-buttons button:hover {
+    background: #c0c0c0;
+    transform: translateY(-2px);
+}
+
+.view-buttons button.active {
+    background: #0a3d62;
+    color: white;
+    box-shadow: 0 2px 8px rgba(10,61,98,0.3);
+}
+
+/* Member Cards - Grid View */
+#directory.directory-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.member-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Fixed Image Sizes */
+.member-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    background-color: #f5f5f5;
+    display: block;
+}
+
+.member-info {
+    padding: 1.2rem;
+}
+
+.member-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #0a3d62;
+}
+
+.member-desc {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+}
+
+.member-address, .member-phone {
+    font-size: 0.85rem;
+    margin: 0.3rem 0;
+    color: #555;
+}
+
+.member-website {
+    display: inline-block;
+    margin: 0.8rem 0;
+    padding: 0.4rem 0.8rem;
+    background: #1e3799;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    transition: background 0.3s;
+}
+
+.member-website:hover {
+    background: #0a3d62;
+}
+
+/* Membership Badges */
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.badge.gold {
+    background: #ffd700;
+    color: #8b6b00;
+}
+
+.badge.silver {
+    background: #c0c0c0;
+    color: #4a4a4a;
+}
+
+.badge.member {
+    background: #e0e0e0;
+    color: #555;
+}
+
+/* List View */
+#directory.directory-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#directory.directory-list .member-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+#directory.directory-list .member-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+#directory.directory-list .member-info {
+    padding: 0;
+}
+
+#directory.directory-list .member-info h3 {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+#directory.directory-list .member-desc,
+#directory.directory-list .member-address,
+#directory.directory-list .member-phone {
+    font-size: 0.8rem;
+    margin: 0.2rem 0;
+}
+
+#directory.directory-list .member-website {
+    margin: 0.3rem 0;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+}
+
+/* Weather Section Styles (for Week 3) */
+.weather-current {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #0a3d62 0%, #1e3799 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.weather-info {
+    text-align: left;
+}
+
+.temp {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+#weather-desc {
+    text-transform: capitalize;
+    margin: 5px 0;
+}
+
+#forecast-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.forecast-card {
+    text-align: center;
+    background: #f8f9fa;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.forecast-card h4 {
+    margin: 0 0 5px 0;
+}
+
+.forecast-card img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Event Styles */
+.event {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.event:last-child {
+    border-bottom: none;
+}
+
+.event h3 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #0a3d62;
+}
+
+/* Loading & Error States */
+.loading {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
+.error {
+    text-align: center;
+    padding: 20px;
+    color: #d9534f;
+    background: #f9e6e6;
+    border-radius: 8px;
+}
+
+/* Footer Enhancements */
+.footer-contact {
+    margin-bottom: 1rem;
+}
+
+.footer-contact p {
+    margin: 0.3rem 0;
+}
+
+.footer-info {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Spotlight Logo */
+.spotlight-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    display: block;
+    background: #f5f5f5;
+}
+
+/* Membership Badges for Spotlights */
+.membership-gold {
+    display: inline-block;
+    background: #ffd700;
+    color: #8b6b00;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.membership-silver {
+    display: inline-block;
+    background: #c0c0c0;
+    color: #4a4a4a;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Forecast Card Text */
+.forecast-temp {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.forecast-desc {
+    font-size: 0.75rem;
+    text-transform: capitalize;
+    color: #666;
 }
