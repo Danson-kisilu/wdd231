@@ -461,3 +461,46 @@ footer {
     background: #f9e6e6;
     border-radius: 8px;
 }
+
+/* Navigation - Fix contrast */
+nav a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+nav a.active {
+    background: #4a69bd;
+    font-weight: bold;
+    color: white;
+}
+
+/* CTA Button - Better contrast */
+.cta {
+    display: inline-block;
+    margin-top: 10px;
+    background: #c0392b;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.cta:hover {
+    background: #a82313;
+}
+
+/* Weather Section - Ensure dark background */
+.weather-current {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #0a3d62 0%, #1e3799 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
