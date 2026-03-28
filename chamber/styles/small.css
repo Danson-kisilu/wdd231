@@ -34,7 +34,7 @@ header h1 {
     cursor: pointer;
 }
 
-/* NAVIGATION */
+/* NAVIGATION - Single Definition */
 nav {
     display: none;
     flex-direction: column;
@@ -50,6 +50,11 @@ nav a {
 
 nav a:hover {
     background: #4a69bd;
+}
+
+nav a.active {
+    background: #4a69bd;
+    font-weight: bold;
 }
 
 nav.open {
@@ -84,10 +89,11 @@ nav.open {
     margin-bottom: 5px;
 }
 
+/* CTA BUTTON - Single Definition (Fixed Contrast) */
 .cta {
     display: inline-block;
     margin-top: 10px;
-    background: #e67e22;
+    background: #c0392b;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -97,7 +103,7 @@ nav.open {
 }
 
 .cta:hover {
-    background: #d35400;
+    background: #a82313;
 }
 
 /* HOME PAGE GRID */
@@ -107,7 +113,7 @@ nav.open {
     padding: 20px;
 }
 
-/* CARD STYLES - Single Definition */
+/* CARD STYLES */
 .card {
     background: white;
     padding: 15px;
@@ -121,7 +127,7 @@ h2 {
     color: #0a3d62;
 }
 
-/* EVENTS - Single Definition */
+/* EVENTS */
 .event {
     margin-bottom: 15px;
     padding-bottom: 10px;
@@ -161,7 +167,7 @@ h2 {
     transform: translateY(-5px);
 }
 
-/* Spotlight Logo - Single Definition */
+/* Spotlight Logo */
 .spotlight-logo {
     width: 100px;
     height: 100px;
@@ -172,7 +178,7 @@ h2 {
     background: #f5f5f5;
 }
 
-/* Membership Badges - Single Definition */
+/* Membership Badges */
 .membership-gold {
     display: inline-block;
     background: #ffd700;
@@ -270,7 +276,7 @@ h2 {
     margin-bottom: 1.5rem;
 }
 
-/* View Buttons - Single Definition */
+/* View Buttons */
 .view-buttons {
     display: flex;
     justify-content: center;
@@ -460,47 +466,4 @@ footer {
     color: #d9534f;
     background: #f9e6e6;
     border-radius: 8px;
-}
-
-/* Navigation - Fix contrast */
-nav a {
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-nav a.active {
-    background: #4a69bd;
-    font-weight: bold;
-    color: white;
-}
-
-/* CTA Button - Better contrast */
-.cta {
-    display: inline-block;
-    margin-top: 10px;
-    background: #c0392b;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background 0.3s;
-}
-
-.cta:hover {
-    background: #a82313;
-}
-
-/* Weather Section - Ensure dark background */
-.weather-current {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: linear-gradient(135deg, #0a3d62 0%, #1e3799 100%);
-    color: white;
-    padding: 20px;
-    border-radius: 12px;
-    margin-bottom: 20px;
 }
