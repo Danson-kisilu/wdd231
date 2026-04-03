@@ -4,39 +4,202 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Join the Chamber | Nairobi Chamber</title>
+    <meta name="description" content="Apply for membership with Nairobi Chamber of Commerce. Choose from NP, Bronze, Silver, or Gold membership levels.">
+    <meta name="author" content="Danson Kisilu">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Join Nairobi Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Apply for membership today and grow your business with us.">
+    <meta property="og:image" content="https://danson-kisilu.github.io/wdd231/chamber/images/hero.jpg">
+    <meta property="og:url" content="https://danson-kisilu.github.io/wdd231/chamber/join.html">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
     <link rel="icon" href="../images/logo.svg">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css">
+    
     <script defer src="scripts/navigation.js"></script>
     <script defer src="scripts/date.js"></script>
+    <script defer src="scripts/join.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Nairobi Chamber of Commerce</h1>
-        <button id="menuButton" aria-label="Menu">☰</button>
-    </header>
-    <nav id="navMenu">
-        <a href="../index.html"> Home</a>
-        <a href="index.html">Chamber </a>
-        <a href="directory.html">Directory</a>
-        <a href="join.html" class="active">Join</a>
-    </nav>
-    <main>
-        <h2>Join the Chamber</h2>
-        <p>Membership application form will be added here.</p>
-        <p>This page is under construction.</p>
-    </main>
-    <footer>
-        <div class="footer-contact">
-            <p><strong>Nairobi Chamber of Commerce</strong></p>
-            <p>📍 Kenyatta Avenue, Nairobi, Kenya</p>
-            <p>📞 +254 700 123456</p>
-            <p>✉️ info@nairobinchamber.co.ke</p>
+
+<header>
+    <h1>Nairobi Chamber of Commerce</h1>
+    <button id="menuButton" aria-label="Menu">☰</button>
+</header>
+
+<nav id="navMenu">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Chamber</a>
+    <a href="directory.html">Directory</a>
+    <a href="join.html" class="active">Join</a>
+</nav>
+
+<main>
+    <div class="join-container">
+        <h2>Membership Application</h2>
+        <p>Join Nairobi's premier business community. Complete the form below to apply.</p>
+        
+        <div class="join-layout">
+            <!-- FORM SECTION -->
+            <form action="thankyou.html" method="get" id="membershipForm">
+                <!-- First Name -->
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" title="Your first name" autocomplete="given-name" required>
+                
+                <!-- Last Name -->
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" title="Your last name" autocomplete="family-name" required>
+                
+                <!-- Organizational Title -->
+                <label for="title">Organizational Title</label>
+                <input type="text" id="title" name="title" title="Your job title" autocomplete="organization-title" pattern="[A-Za-z\-\s]{7,}" placeholder="e.g., Director, Manager, CEO">
+                <small>Only letters, hyphens, and spaces. Minimum 7 characters.</small>
+                
+                <!-- Email -->
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" title="Your email address" autocomplete="email" placeholder="name@example.com" required>
+                
+                <!-- Mobile Phone -->
+                <label for="phone">Mobile Phone Number *</label>
+                <input type="tel" id="phone" name="phone" title="Your mobile number" autocomplete="tel" required>
+                
+                <!-- Business/Organization Name -->
+                <label for="organization">Business/Organization Name *</label>
+                <input type="text" id="organization" name="organization" title="Your business name" autocomplete="organization" required>
+                
+                <!-- Membership Level -->
+                <label for="membership">Membership Level *</label>
+                <select id="membership" name="membership" required>
+                    <option value="">Select a membership level</option>
+                    <option value="np">NP Membership (Non-Profit - Free)</option>
+                    <option value="bronze">Bronze Membership</option>
+                    <option value="silver">Silver Membership</option>
+                    <option value="gold">Gold Membership</option>
+                </select>
+                
+                <!-- Business Description -->
+                <label for="description">Business/Organization Description</label>
+                <textarea id="description" name="description" rows="4" title="Describe your business" placeholder="Tell us about your organization..."></textarea>
+                
+                <!-- Hidden Timestamp -->
+                <input type="hidden" id="timestamp" name="timestamp">
+                
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn">Submit Application →</button>
+            </form>
+            
+            <!-- MEMBERSHIP CARDS SECTION -->
+            <div class="membership-cards">
+                <div class="card np-card">
+                    <h3>NP Membership</h3>
+                    <p class="price">Free</p>
+                    <p>For non-profit organizations</p>
+                    <button class="modal-btn" data-modal="npModal">Learn More →</button>
+                </div>
+                
+                <div class="card bronze-card">
+                    <h3>Bronze Membership</h3>
+                    <p class="price">$100/year</p>
+                    <p>Basic benefits for small businesses</p>
+                    <button class="modal-btn" data-modal="bronzeModal">Learn More →</button>
+                </div>
+                
+                <div class="card silver-card">
+                    <h3>Silver Membership</h3>
+                    <p class="price">$250/year</p>
+                    <p>Enhanced visibility and networking</p>
+                    <button class="modal-btn" data-modal="silverModal">Learn More →</button>
+                </div>
+                
+                <div class="card gold-card">
+                    <h3>Gold Membership</h3>
+                    <p class="price">$500/year</p>
+                    <p>Premium benefits and spotlight opportunities</p>
+                    <button class="modal-btn" data-modal="goldModal">Learn More →</button>
+                </div>
+            </div>
         </div>
-        <div class="footer-info">
-            <p>© <span id="year"></span> • Danson Kisilu • WDD 231</p>
-            <p id="lastModified"></p>
+    </div>
+    
+    <!-- MODALS -->
+    <dialog id="npModal" class="modal">
+        <div class="modal-content">
+            <h3>NP Membership Benefits</h3>
+            <ul>
+                <li>✓ Listing in online directory</li>
+                <li>✓ Access to networking events</li>
+                <li>✓ Monthly newsletter subscription</li>
+                <li>✓ Free admission to business workshops</li>
+            </ul>
+            <button class="close-modal">Close</button>
         </div>
-    </footer>
+    </dialog>
+    
+    <dialog id="bronzeModal" class="modal">
+        <div class="modal-content">
+            <h3>Bronze Membership Benefits</h3>
+            <ul>
+                <li>✓ All NP benefits</li>
+                <li>✓ Logo on chamber website</li>
+                <li>✓ Discounted event tickets (10%)</li>
+                <li>✓ Member spotlight on social media</li>
+                <li>✓ Business referral network access</li>
+            </ul>
+            <button class="close-modal">Close</button>
+        </div>
+    </dialog>
+    
+    <dialog id="silverModal" class="modal">
+        <div class="modal-content">
+            <h3>Silver Membership Benefits</h3>
+            <ul>
+                <li>✓ All Bronze benefits</li>
+                <li>✓ Priority event registration</li>
+                <li>✓ Discounted event tickets (20%)</li>
+                <li>✓ Featured listing in directory</li>
+                <li>✓ Advertising opportunities (2/year)</li>
+                <li>✓ Access to member-only events</li>
+            </ul>
+            <button class="close-modal">Close</button>
+        </div>
+    </dialog>
+    
+    <dialog id="goldModal" class="modal">
+        <div class="modal-content">
+            <h3>Gold Membership Benefits</h3>
+            <ul>
+                <li>✓ All Silver benefits</li>
+                <li>✓ Home page spotlight position</li>
+                <li>✓ Discounted event tickets (30%)</li>
+                <li>✓ Premium listing with logo</li>
+                <li>✓ Advertising opportunities (4/year)</li>
+                <li>✓ Speaking opportunities at events</li>
+                <li>✓ Exclusive CEO roundtable access</li>
+            </ul>
+            <button class="close-modal">Close</button>
+        </div>
+    </dialog>
+</main>
+
+<footer>
+    <div class="footer-contact">
+        <p><strong>Nairobi Chamber of Commerce</strong></p>
+        <p>📍 Kenyatta Avenue, Nairobi, Kenya</p>
+        <p>📞 +254 700 123456</p>
+        <p>✉️ info@nairobinchamber.co.ke</p>
+    </div>
+    <div class="footer-info">
+        <p>© <span id="year"></span> • Danson Kisilu • WDD 231</p>
+        <p id="lastModified"></p>
+    </div>
+</footer>
+
 </body>
 </html>
