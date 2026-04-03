@@ -25,25 +25,3 @@ grid-template-columns:repeat(3,1fr);
 
 }
 
-/* Large screens - form and cards side by side */
-@media (min-width: 768px) {
-    .join-layout {
-        flex-direction: row;
-        gap: 2rem;
-    }
-    
-    form {
-        flex: 2;
-    }
-    
-    .membership-cards {
-        flex: 1;
-        grid-template-columns: 1fr;
-        align-self: start;
-    }
-    
-    .summary-item {
-        flex-direction: row;
-        gap: 1rem;
-    }
-}
