@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Plan: Nairobi Street Kitchen</title>
+    <meta name="description" content="Site plan for Nairobi Street Kitchen - a local food vendor directory.">
+    <meta name="author" content="Danson Kisilu">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Color Scheme */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: #fefae0;
+            color: #1b4332;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: #2d6a4f;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px 10px 0 0;
+        }
+        
+        section {
+            background: white;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: #2d6a4f;
+            border-bottom: 3px solid #f4a261;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .color-swatch {
+            display: inline-block;
+            width: 50px;
+            height: 25px;
+            border-radius: 5px;
+            margin-right: 10px;
+            vertical-align: middle;
+            border: 1px solid #ccc;
+        }
+        
+        /* WIREFRAME STYLES */
+        .wireframe-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        .wireframe-card {
+            flex: 1;
+            min-width: 280px;
+        }
+        
+        .wireframe-card h3 {
+            text-align: center;
+            margin-bottom: 15px;
+            color: #2d6a4f;
+        }
+        
+        .mobile-wireframe {
+            background: #f8f8f4;
+            border: 2px dashed #2d6a4f;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        
+        .wf-header {
+            background: #d9d0b5;
+            height: 35px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .wf-hero {
+            background: #e6dfcc;
+            height: 70px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            color: #5a4e2f;
+        }
+        
+        .wf-card {
+            background: #e6dfcc;
+            height: 50px;
+            border-radius: 5px;
+            margin-bottom: 8px;
+        }
+        
+        .wf-footer {
+            background: #d9d0b5;
+            height: 30px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        
+        .desktop-wireframe {
+            background: #f8f8f4;
+            border: 2px dashed #2d6a4f;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        
+        .desktop-header {
+            background: #d9d0b5;
+            height: 45px;
+            border-radius: 5px;
+            margin-bottom: 12px;
+        }
+        
+        .desktop-hero {
+            background: #e6dfcc;
+            height: 90px;
+            border-radius: 5px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #5a4e2f;
+        }
+        
+        .desktop-grid {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        
+        .desktop-card {
+            flex: 1;
+            background: #e6dfcc;
+            height: 70px;
+            border-radius: 5px;
+        }
+        
+        .wireframe-label {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 11px;
+            color: #666;
+        }
+        
+        footer {
+            background: #2d6a4f;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 0 0 10px 10px;
+            margin-top: 20px;
+        }
+        
+        @media (min-width: 768px) {
+            .wireframe-row {
+                flex-direction: row;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🍽️ Nairobi Street Kitchen</h1>
+    <p>Site Plan – Local Food Vendor Directory</p>
+</header>
+
+<!-- SITE NAME -->
+<section>
+    <h2>📛 Site Name</h2>
+    <p><strong>Nairobi Street Kitchen</strong></p>
+    <p>This name represents a directory focused on street food vendors in Nairobi, Kenya. It is memorable, easy to spell, and captures the vibrant food culture of the city.</p>
+    <p><em>Optional domain: nairo bistro.com</em></p>
+</section>
+
+<!-- SITE PURPOSE -->
+<section>
+    <h2>🎯 Site Purpose</h2>
+    <p>The site provides a comprehensive directory of street food vendors and food trucks in Nairobi. Users can discover vendors by location, cuisine, and price range, view ratings and hours, and find weekly spotlights.</p>
+</section>
+
+<!-- SCENARIOS -->
+<section>
+    <h2>💬 User Scenarios</h2>
+    <ul>
+        <li><strong>"What are the top-rated food trucks near Kenyatta Market?"</strong> – Location-based search with ratings.</li>
+        <li><strong>"Which vendors offer vegetarian or vegan options?"</strong> – Dietary filtering.</li>
+        <li><strong>"How can I get my food business listed on this site?"</strong> – Vendor submission information.</li>
+    </ul>
+</section>
+
+<!-- COLOR SCHEME -->
+<section>
+    <h2>🎨 Color Scheme</h2>
+    <ul style="list-style: none; padding-left: 0;">
+        <li><span class="color-swatch" style="background: #2d6a4f;"></span> <strong>Deep Green (#2d6a4f)</strong> – Headers, footer, section headings</li>
+        <li><span class="color-swatch" style="background: #f4a261;"></span> <strong>Warm Orange (#f4a261)</strong> – Accent borders, hover effects</li>
+        <li><span class="color-swatch" style="background: #fefae0;"></span> <strong>Soft Cream (#fefae0)</strong> – Page background</li>
+        <li><span class="color-swatch" style="background: #1b4332;"></span> <strong>Dark Green (#1b4332)</strong> – Body text</li>
+    </ul>
+</section>
+
+<!-- TYPOGRAPHY -->
+<section>
+    <h2>🔤 Typography</h2>
+    <p><strong>Primary Font:</strong> 'Open Sans', sans-serif</p>
+    <ul>
+        <li><strong>Headings:</strong> Open Sans, weight 700, Deep Green</li>
+        <li><strong>Body text:</strong> Open Sans, weight 400, Dark Green</li>
+        <li><strong>Buttons/Links:</strong> Open Sans, weight 600, Orange accent on hover</li>
+    </ul>
+</section>
+
+<!-- WIREFRAMES -->
+<section>
+    <h2>📱 Wireframes</h2>
+    <div class="wireframe-row">
+        
+        <div class="wireframe-card">
+            <h3>📲 Mobile View (≤640px)</h3>
+            <div class="mobile-wireframe">
+                <div class="wf-header"></div>
+                <div class="wf-hero">Hero Image</div>
+                <div class="wf-card"></div>
+                <div class="wf-card"></div>
+                <div class="wf-card"></div>
+                <div class="wf-footer"></div>
+            </div>
+            <div class="wireframe-label">Single column – Stacked vendor cards, hamburger menu</div>
+        </div>
+        
+        <div class="wireframe-card">
+            <h3>🖥️ Desktop View (≥768px)</h3>
+            <div class="desktop-wireframe">
+                <div class="desktop-header"></div>
+                <div class="desktop-hero">Hero Banner</div>
+                <div class="desktop-grid">
+                    <div class="desktop-card"></div>
+                    <div class="desktop-card"></div>
+                    <div class="desktop-card"></div>
+                </div>
+                <div class="desktop-grid">
+                    <div class="desktop-card"></div>
+                    <div class="desktop-card"></div>
+                </div>
+                <div class="wf-footer"></div>
+            </div>
+            <div class="wireframe-label">Horizontal navigation – 3‑column grid for vendor cards</div>
+        </div>
+        
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Danson Kisilu – WDD231 Individual Project</p>
+    <p>Nairobi Street Kitchen | Local Food Vendor Directory</p>
+</footer>
+
+</body>
+</html>
