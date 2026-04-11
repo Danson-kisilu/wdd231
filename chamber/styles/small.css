@@ -34,7 +34,7 @@ header h1 {
     cursor: pointer;
 }
 
-/* NAVIGATION - Single Definition */
+/* NAVIGATION */
 nav {
     display: none;
     flex-direction: column;
@@ -55,7 +55,7 @@ nav a:hover {
 nav a.active {
     background: #4a69bd;
     font-weight: bold;
-    color: white
+    color: white;
 }
 
 nav.open {
@@ -90,7 +90,7 @@ nav.open {
     margin-bottom: 5px;
 }
 
-/* CTA BUTTON - Single Definition (Fixed Contrast) */
+/* CTA BUTTON */
 .cta {
     display: inline-block;
     margin-top: 10px;
@@ -168,7 +168,6 @@ h2 {
     transform: translateY(-5px);
 }
 
-/* Spotlight Logo */
 .spotlight-logo {
     width: 100px;
     height: 100px;
@@ -179,7 +178,6 @@ h2 {
     background: #f5f5f5;
 }
 
-/* Membership Badges */
 .membership-gold {
     display: inline-block;
     background: #ffd700;
@@ -202,7 +200,7 @@ h2 {
     margin-top: 10px;
 }
 
-/* WEATHER SECTION - Single Definition */
+/* WEATHER SECTION */
 .weather-current {
     display: flex;
     justify-content: space-between;
@@ -277,7 +275,6 @@ h2 {
     margin-bottom: 1.5rem;
 }
 
-/* View Buttons */
 .view-buttons {
     display: flex;
     justify-content: center;
@@ -308,14 +305,12 @@ h2 {
     box-shadow: 0 2px 8px rgba(10, 61, 98, 0.3);
 }
 
-/* Directory Grid */
 #directory.directory-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
 }
 
-/* Member Cards */
 .member-card {
     background: white;
     border-radius: 12px;
@@ -376,7 +371,6 @@ h2 {
     background: #0a3d62;
 }
 
-/* Badges */
 .badge {
     display: inline-block;
     padding: 0.25rem 0.75rem;
@@ -400,7 +394,6 @@ h2 {
     color: #555;
 }
 
-/* List View */
 #directory.directory-list {
     display: flex;
     flex-direction: column;
@@ -454,7 +447,7 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Loading & Error States */
+/* LOADING & ERROR */
 .loading {
     text-align: center;
     padding: 20px;
@@ -469,9 +462,7 @@ footer {
     border-radius: 8px;
 }
 
-
-
-/* JOIN PAGE STYLES */
+/* JOIN PAGE */
 .join-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -495,12 +486,11 @@ footer {
     gap: 2rem;
 }
 
-/* Form Styles */
 form {
     background: white;
     padding: 1.5rem;
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 label {
@@ -523,7 +513,7 @@ input, select, textarea {
 input:focus, select:focus, textarea:focus {
     outline: none;
     border-color: #0a3d62;
-    box-shadow: 0 0 0 2px rgba(10,61,98,0.2);
+    box-shadow: 0 0 0 2px rgba(10, 61, 98, 0.2);
 }
 
 small {
@@ -551,7 +541,6 @@ small {
     background: #a82313;
 }
 
-/* Membership Cards */
 .membership-cards {
     display: grid;
     grid-template-columns: 1fr;
@@ -600,24 +589,22 @@ small {
     background: #1e3799;
 }
 
-/* NP Card */
 .np-card { border-top: 4px solid #2ecc71; }
 .bronze-card { border-top: 4px solid #cd7f32; }
 .silver-card { border-top: 4px solid #c0c0c0; }
 .gold-card { border-top: 4px solid #ffd700; }
 
-/* Modal Styles */
 .modal {
     border: none;
     border-radius: 12px;
     padding: 0;
     max-width: 400px;
     width: 90%;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 }
 
 .modal::backdrop {
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {
@@ -650,7 +637,6 @@ small {
     width: 100%;
 }
 
-/* Thank You Page */
 .thankyou-container {
     max-width: 800px;
     margin: 0 auto;
@@ -664,7 +650,7 @@ small {
     border-radius: 12px;
     margin: 2rem 0;
     text-align: left;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .submission-summary h3 {
@@ -690,8 +676,7 @@ small {
     color: #0a3d62;
 }
 
-
-/* DISCOVER PAGE - MOBILE STYLES */
+/* DISCOVER PAGE */
 .discover-header {
     text-align: center;
     padding: 1rem;
@@ -705,7 +690,6 @@ small {
     margin-bottom: 0.5rem;
 }
 
-/* Visit Message */
 .visit-message {
     text-align: center;
     padding: 0.8rem;
@@ -732,13 +716,10 @@ small {
     border-left: 4px solid #1565c0;
 }
 
-/* DISCOVER GRID - USING GRID TEMPLATE AREAS */
 .discover-grid {
     display: grid;
     gap: 1.5rem;
     padding: 1rem;
-    
-    /* Mobile layout - single column */
     grid-template-areas:
         "card1"
         "card2"
@@ -754,7 +735,7 @@ small {
     background: white;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
@@ -775,7 +756,6 @@ small {
     overflow: hidden;
 }
 
-/* No hover effect on mobile - images just display normally */
 .discover-card img {
     width: 100%;
     height: 180px;
@@ -816,7 +796,6 @@ small {
     background: #1e3799;
 }
 
-/* Assign grid areas to cards */
 .discover-card:nth-child(1) { grid-area: card1; }
 .discover-card:nth-child(2) { grid-area: card2; }
 .discover-card:nth-child(3) { grid-area: card3; }
@@ -825,10 +804,3 @@ small {
 .discover-card:nth-child(6) { grid-area: card6; }
 .discover-card:nth-child(7) { grid-area: card7; }
 .discover-card:nth-child(8) { grid-area: card8; }
-
-body {
-    font-family: 'Roboto', Arial, sans-serif;
-    background: #f5f7fa;
-    line-height: 1.6;
-    color: #222;
-}
