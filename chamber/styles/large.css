@@ -141,3 +141,43 @@
         gap: 1rem;
     }
 }
+
+
+/* LARGE SCREEN STYLES - 1025px and above */
+@media (min-width: 1025px) {
+    
+    .discover-grid {
+        /* Large layout - 3 column with featured card */
+        grid-template-areas:
+            "card1 card2 card3"
+            "card4 card5 card6"
+            "card7 card8 .";
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .discover-card img {
+        height: 220px;
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
+    
+    /* Image hover effect for large screens */
+    .discover-card img:hover {
+        transform: scale(1.05);
+        filter: brightness(0.9) saturate(1.1);
+    }
+    
+    .discover-header {
+        padding: 2rem;
+    }
+    
+    .discover-header h2 {
+        font-size: 2rem;
+    }
+    
+    .learn-more-btn:hover {
+        background: #c0392b;
+        transform: scale(1.02);
+    }
+}

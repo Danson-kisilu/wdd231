@@ -1,0 +1,31 @@
+/* MEDIUM SCREEN STYLES - 641px to 1024px */
+@media (min-width: 641px) and (max-width: 1024px) {
+    
+    .discover-grid {
+        /* Medium layout - 2 column staggered */
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
+        gap: 1.5rem;
+    }
+    
+    .discover-card img {
+        height: 200px;
+    }
+    
+    /* Image hover effect ONLY for medium and large screens */
+    .discover-card img {
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    
+    .discover-card img:hover {
+        transform: scale(1.05);
+        opacity: 0.9;
+    }
+    
+    .discover-header h2 {
+        font-size: 1.8rem;
+    }
+}
