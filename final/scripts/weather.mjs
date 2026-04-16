@@ -1,4 +1,4 @@
-// weather.mjs - Weather API module (reused from chamber project)
+// weather.mjs - Weather API module
 const API_KEY = '36687cf944b7a0795e657f05e48a722e';
 const LAT = '-1.2864';
 const LON = '36.8172';

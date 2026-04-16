@@ -30,7 +30,6 @@ function displayProducts(products) {
     const container = document.getElementById('products-container');
     if (!container) return;
     
-    // Using map() array method and template literals
     container.innerHTML = products.map(product => `
         <div class="product-card" data-id="${product.id}">
             <img src="${getProductImage(product.image)}" alt="${product.name}" class="product-image" loading="lazy" onerror="this.src='https://picsum.photos/id/13/400/300'">
@@ -61,7 +60,6 @@ function setupFilters() {
             btn.classList.add('active');
             
             const filter = btn.dataset.filter;
-            // Using filter() array method
             const filtered = filter === 'all' 
                 ? allProducts 
                 : allProducts.filter(p => p.category === filter);

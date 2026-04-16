@@ -1,5 +1,5 @@
-// navigation.mjs - Mobile menu toggle
-export function setupNavigation() {
+// navigation.js - Mobile menu toggle
+document.addEventListener('DOMContentLoaded', () => {
     const menuButton = document.getElementById('menuButton');
     const navMenu = document.getElementById('navMenu');
     
@@ -8,4 +8,4 @@ export function setupNavigation() {
             navMenu.classList.toggle('open');
         });
     }
-}
+});
