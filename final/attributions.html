@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attributions | FarmConnect Kenya</title>
+    <meta name="description" content="Source attributions for FarmConnect Kenya project">
+    <meta name="author" content="Danson Kisilu">
+    
+    <link rel="icon" href="../images/logo.svg">
+    <link rel="stylesheet" href="styles/final-small.css">
+    <link rel="stylesheet" href="styles/final-large.css">
+    
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="../images/logo.svg" alt="FarmConnect Logo">
+        <h1>FarmConnect Kenya</h1>
+    </div>
+    <button id="menuButton" aria-label="Menu">☰</button>
+</header>
+
+<nav id="navMenu">
+    <a href="../index.html">Main</a>
+    <a href="index.html">Home</a>
+    <a href="products.html">Directory</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<main>
+    <div class="attributions-container">
+        <h2>Attributions</h2>
+        
+        <h3>Weather Data</h3>
+        <p>Weather information provided by <a href="https://openweathermap.org/" target="_blank">OpenWeatherMap</a></p>
+        
+        <h3>Images</h3>
+        <p>Placeholder images from <a href="https://picsum.photos/" target="_blank">Picsum Photos</a></p>
+        
+        <h3>Fonts</h3>
+        <p>Google Fonts - <a href="https://fonts.google.com/specimen/Poppins" target="_blank">Poppins</a></p>
+        
+        <hr>
+        <p class="copyright">© <span id="year"></span> FarmConnect Kenya | Created by Danson Kisilu</p>
+        
+        <a href="index.html" class="cta">← Back to Home</a>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <p>© <span id="year2"></span> FarmConnect Kenya | Danson Kisilu</p>
+        <p id="lastModified"></p>
+        <div class="footer-links">
+            <a href="attributions.html">Attributions</a>
+            <a href="#" id="videoLink">Project Video</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('year2').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmConnect Kenya | Farmers & Exporters Marketplace</title>
+    <meta name="description" content="Connect with Kenyan farmers and exporters. Buy and sell fresh produce directly. Supporting local agriculture and export trade.">
+    <meta name="author" content="Danson Kisilu">
+    
+    <meta property="og:title" content="FarmConnect Kenya">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Connect with Kenyan farmers and exporters">
+    <meta property="og:image" content="https://danson-kisilu.github.io/wdd231/final/images/hero.jpg">
+    <meta property="og:url" content="https://danson-kisilu.github.io/wdd231/final/index.html">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="../images/logo.svg">
+    <link rel="stylesheet" href="styles/final-small.css">
+    <link rel="stylesheet" href="styles/final-large.css">
+    
+    <script type="module" src="scripts/main.mjs"></script>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="../images/logo.svg" alt="FarmConnect Logo">
+        <h1>FarmConnect Kenya</h1>
+    </div>
+    <button id="menuButton" aria-label="Menu">☰</button>
+</header>
+
+<nav id="navMenu">
+    <a href="../index.html">Main</a>
+    <a href="index.html" class="active">Home</a>
+    <a href="products.html">Directory</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<main>
+    <section class="hero">
+        <img src="https://picsum.photos/id/104/1200/400" alt="Kenyan farm landscape" loading="lazy">
+        <div class="hero-text">
+            <h2>Connect. Trade. Grow.</h2>
+            <p>Direct marketplace connecting Kenyan farmers with local and international exporters</p>
+            <a href="products.html" class="cta">Browse Produce →</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <h2>Why FarmConnect?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>🌱 Direct Trade</h3>
+                <p>Connect directly with farmers, no middlemen</p>
+            </div>
+            <div class="feature-card">
+                <h3>📦 Export Ready</h3>
+                <p>Quality produce prepared for export</p>
+            </div>
+            <div class="feature-card">
+                <h3>🤝 Trusted Network</h3>
+                <p>Verified farmers and exporters</p>
+            </div>
+            <div class="feature-card">
+                <h3>🚚 Nationwide</h3>
+                <p>Farmers from all 47 counties</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="stat">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">Farmers</span>
+        </div>
+        <div class="stat">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Exporters</span>
+        </div>
+        <div class="stat">
+            <span class="stat-number">100+</span>
+            <span class="stat-label">Products</span>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <p>© <span id="year"></span> FarmConnect Kenya | Danson Kisilu</p>
+        <p id="lastModified"></p>
+        <div class="footer-links">
+            <a href="attributions.html">Attributions</a>
+            <a href="#" id="videoLink">Project Video</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

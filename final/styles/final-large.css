@@ -1,0 +1,139 @@
+/* Large Screen Styles - 768px and up */
+@media (min-width: 768px) {
+    /* Hide hamburger menu */
+    #menuButton {
+        display: none;
+    }
+    
+    /* Horizontal navigation */
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    nav a {
+        border: none;
+        padding: 1rem 1.5rem;
+    }
+    
+    /* Header */
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    /* Features Grid - 4 columns */
+    .features-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    /* Hero Section */
+    .hero img {
+        height: 400px;
+    }
+    
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+    
+    .hero-text p {
+        font-size: 1.1rem;
+    }
+    
+    .hero-stats {
+        font-size: 1rem;
+    }
+    
+    .products-hero .hero-text {
+        width: 70%;
+    }
+    
+    /* Stats Section */
+    .stats {
+        gap: 3rem;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    /* PRODUCTS GRID - 2 columns on tablet */
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 1rem 2rem 2rem;
+    }
+    
+    /* Contact Page - Side by side */
+    .contact-container {
+        flex-direction: row;
+    }
+    
+    .contact-info, form {
+        flex: 1;
+    }
+}
+
+/* Desktop - 1024px and up */
+@media (min-width: 1024px) {
+    /* Hero */
+    .hero img {
+        height: 500px;
+    }
+    
+    .hero-text h2 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-text {
+        width: 60%;
+        padding: 2rem;
+    }
+    
+    /* PRODUCTS GRID - 3 columns on small desktop */
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.75rem;
+    }
+    
+    /* Filter buttons */
+    .filter-btn {
+        padding: 0.6rem 1.25rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Large Desktop - 1200px and up */
+@media (min-width: 1200px) {
+    /* PRODUCTS GRID - 4x4 LAYOUT! */
+    .products-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        max-width: 1400px;
+    }
+    
+    /* Product cards scale nicely */
+    .product-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .price {
+        font-size: 1.3rem;
+    }
+    
+    /* Stats */
+    .stat-number {
+        font-size: 3rem;
+    }
+}
+
+/* Extra Large Desktop - 1600px and up */
+@media (min-width: 1600px) {
+    .products-grid {
+        max-width: 1600px;
+        gap: 2rem;
+    }
+}

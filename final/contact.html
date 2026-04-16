@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | FarmConnect Kenya</title>
+    <meta name="description" content="Get in touch with FarmConnect Kenya. Register as a farmer or exporter, ask questions, or request product information.">
+    <meta name="author" content="Danson Kisilu">
+    
+    <meta property="og:title" content="Contact FarmConnect Kenya">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Get in touch with our team">
+    <meta property="og:image" content="https://danson-kisilu.github.io/wdd231/final/images/hero.jpg">
+    <meta property="og:url" content="https://danson-kisilu.github.io/wdd231/final/contact.html">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="../images/logo.svg">
+    <link rel="stylesheet" href="styles/final-small.css">
+    <link rel="stylesheet" href="styles/final-large.css">
+    
+    <script type="module" src="scripts/contact.mjs"></script>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="../images/logo.svg" alt="FarmConnect Logo">
+        <h1>FarmConnect Kenya</h1>
+    </div>
+    <button id="menuButton" aria-label="Menu">☰</button>
+</header>
+
+<nav id="navMenu">
+    <a href="../index.html">Main</a>
+    <a href="index.html">Home</a>
+    <a href="products.html">Directory</a>
+    <a href="contact.html" class="active">Contact</a>
+</nav>
+
+<main>
+    <div class="contact-container">
+        <div class="contact-info">
+            <h2>Get In Touch</h2>
+            <p>Whether you're a farmer looking to sell or an exporter seeking quality produce, we're here to help.</p>
+            
+            <div class="info-details">
+                <p>📞 +254 700 123456</p>
+                <p>✉️ info@farmconnect.co.ke</p>
+                <p>📍 Nairobi, Kenya</p>
+            </div>
+            
+            <div class="saved-preferences">
+                <h3>Your Saved Preferences</h3>
+                <div id="savedPreferences">No saved preferences yet.</div>
+                <button id="clearStorageBtn" class="btn-secondary">Clear Preferences</button>
+            </div>
+        </div>
+        
+        <form action="thankyou.html" method="get" id="contactForm">
+            <h3>Send us a message</h3>
+            
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required autocomplete="name">
+            
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+            
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel">
+            
+            <label for="interest">I am a... *</label>
+            <select id="interest" name="interest" required>
+                <option value="">Select one</option>
+                <option value="farmer">Farmer</option>
+                <option value="exporter">Exporter</option>
+                <option value="both">Both</option>
+            </select>
+            
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <input type="hidden" id="timestamp" name="timestamp">
+            
+            <button type="submit" class="submit-btn">Send Message →</button>
+        </form>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <p>© <span id="year"></span> FarmConnect Kenya | Danson Kisilu</p>
+        <p id="lastModified"></p>
+        <div class="footer-links">
+            <a href="attributions.html">Attributions</a>
+            <a href="#" id="videoLink">Project Video</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

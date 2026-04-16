@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produce Directory | FarmConnect Kenya</title>
+    <meta name="description" content="Browse fresh produce from Kenyan farmers. Fresh fruits, vegetables, nuts, and more for export and local trade.">
+    <meta name="author" content="Danson Kisilu">
+    
+    <meta property="og:title" content="Produce Directory - FarmConnect Kenya">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Browse fresh produce from Kenyan farmers">
+    <meta property="og:image" content="https://danson-kisilu.github.io/wdd231/final/images/hero.jpg">
+    <meta property="og:url" content="https://danson-kisilu.github.io/wdd231/final/products.html">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="../images/logo.svg">
+    <link rel="stylesheet" href="styles/final-small.css">
+    <link rel="stylesheet" href="styles/final-large.css">
+    
+    <script type="module" src="scripts/products.mjs"></script>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="../images/logo.svg" alt="FarmConnect Logo">
+        <h1>FarmConnect Kenya</h1>
+    </div>
+    <button id="menuButton" aria-label="Menu">☰</button>
+</header>
+
+<nav id="navMenu">
+    <a href="../index.html">Main</a>
+    <a href="index.html">Home</a>
+    <a href="products.html" class="active">Directory</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<main>
+    <section class="hero products-hero">
+        <img src="https://picsum.photos/id/102/1200/400" alt="Fresh Kenyan farm produce" loading="lazy">
+        <div class="hero-text">
+            <h2>Fresh Produce Directory</h2>
+            <p>Discover quality farm products directly from Kenyan farmers</p>
+            <p class="hero-stats">🍎 16+ Products | 🚚 Nationwide Delivery | ✅ Export Ready</p>
+        </div>
+    </section>
+
+    <div class="directory-header">
+        <h2>Available Produce</h2>
+        <p>Browse fresh produce from farmers across Kenya</p>
+        
+        <div class="weather-widget">
+            <h3>🌤️ Nairobi Weather</h3>
+            <div class="weather-info">
+                <p class="temp" id="current-temp">--°C</p>
+                <p id="weather-desc">Loading...</p>
+                <p>💧 Humidity: <span id="humidity">--</span>%</p>
+            </div>
+            <img id="weather-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Weather icon" width="50" height="50">
+        </div>
+        
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All (16)</button>
+            <button class="filter-btn" data-filter="Fruits">Fruits</button>
+            <button class="filter-btn" data-filter="Vegetables">Vegetables</button>
+            <button class="filter-btn" data-filter="Beverages">Tea & Coffee</button>
+            <button class="filter-btn" data-filter="Nuts">Nuts</button>
+            <button class="filter-btn" data-filter="Spices">Spices & Herbs</button>
+            <button class="filter-btn" data-filter="Other">Other</button>
+        </div>
+    </div>
+    
+    <div id="products-container" class="products-grid"></div>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <p>© <span id="year"></span> FarmConnect Kenya | Danson Kisilu</p>
+        <p id="lastModified"></p>
+        <div class="footer-links">
+            <a href="attributions.html">Attributions</a>
+            <a href="#" id="videoLink">Project Video</a>
+        </div>
+    </div>
+</footer>
+
+<dialog id="productModal" class="modal">
+    <div class="modal-content">
+        <img id="modalImage" src="" alt="Product image" class="modal-image">
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc"></p>
+        <p><strong>Price:</strong> <span id="modalPrice"></span></p>
+        <p><strong>Available Quantity:</strong> <span id="modalQuantity"></span></p>
+        <p><strong>Farmer:</strong> <span id="modalFarmer"></span></p>
+        <p><strong>Location:</strong> <span id="modalLocation"></span></p>
+        <p><strong>Export Ready:</strong> <span id="modalExport"></span></p>
+        <button class="close-modal">Close</button>
+    </div>
+</dialog>
+
+</body>
+</html>
